@@ -1,0 +1,31 @@
+{
+  "name": "prettier-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "copyfiles": "^2.1.1",
+    "cpx": "^1.5.0",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "execute": "npm run remove-src && npm run restore-src && npm run prettify",
+    "restore-src": "cpx \"sample/**/*.ts\" src",
+    "remove-src": "rimraf src",
+    "prettify": "prettier --write \"src/**/*.ts\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danmt/prettier-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danmt/prettier-poc/issues"
+  },
+  "homepage": "https://github.com/danmt/prettier-poc#readme"
+}
